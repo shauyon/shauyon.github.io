@@ -160,6 +160,77 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/08/04/%E7%AE%97%E6%B3%95/KMP%E7%AE%97%E6%B3%95%E4%B8%8Enext%E6%95%B0%E7%BB%84%E6%8E%A8%E5%AF%BC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/08/04/%E7%AE%97%E6%B3%95/KMP%E7%AE%97%E6%B3%95%E4%B8%8Enext%E6%95%B0%E7%BB%84%E6%8E%A8%E5%AF%BC/" class="post-title-link" itemprop="url">算法之KMP算法与next数组推导</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2024-08-04 16:11:37 / Modified: 23:27:24" itemprop="dateCreated datePublished" datetime="2024-08-04T16:11:37+08:00">2024-08-04</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="KMP算法介绍"><a href="#KMP算法介绍" class="headerlink" title="KMP算法介绍"></a>KMP算法介绍</h1><p>KMP算法是由Knuth、Morris和Pratt提出的一个高效的字符串匹配算法。设待匹配字符串为S，模式串为W，该算法的核心思想是在S与W的匹配过程中，每次匹配不必从S的上一次匹配的下一个字符与W的起始字符开始，可以跳过部分字符，从而提高字符串匹配效率。</p>
+<h1 id="如何跳过字符"><a href="#如何跳过字符" class="headerlink" title="如何跳过字符"></a>如何跳过字符</h1><p>下面我们举例说明，假设S为”ABCDABCDABDE”，W为”ABCDABD”。最直接的匹配算法是，从S的第一个字符开始，依次与W的每个字符进行比较，此时匹配到S的字符’C’时，发现与W的字符’D’不匹配，则停止匹配。重新从S的下一个字符’B’开始，依次与W的每个字符进行比较。循环此过程，直至比较结束。</p>
+<p>回顾一下这个比较过程，当S的’ABCDABC’与W的’ABCDABD’匹配时，当S的字符’C’时，发现与W的字符’D’不匹配时，’ABCDABC’子串中的’B’,’C’和’D’与W的第一个字符’A’都不匹配，因此，如果我们可以跳过’B’,’C’和’D’，直接从S的下一个字符’A’开始比较，则可以节省很多时间。</p>
+<p>那么，如何知道哪些字符可以跳过呢？</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2024/08/03/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -293,9 +364,17 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">posts</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">tags</span>
       </div>
   </nav>
 </div>
